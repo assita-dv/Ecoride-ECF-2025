@@ -1,0 +1,226 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5fdf8;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #2d6a4f;
+  color: white;
+ /* padding: 1rem;*/
+  text-align: center;
+}
+footer p a {
+    color: #f5fdf8;
+    text-decoration: none;
+}
+footer {
+    padding-top: 0;
+}
+/* debut navbar */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 180px; /* ajuste la taille du logo selon ton besoin */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 150px;
+}
+
+.navbar {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+  background-color: #114B4B; /* couleur de fond de la navbar si besoin */
+  width: 100%;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* fin navbar */
+
+/* section hero présentation */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffdd;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 200px;
+  padding: 3rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #1b4332;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  color: #2d6a4f;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.hero-img {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* debut section recherche */
+.recherche {
+  background-color: #c6e182
+  ;
+  padding: 2rem;
+  text-align: center;
+}
+
+.recherche form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.recherche input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 150px;
+}
+
+.recherche button {
+  padding: 0.5rem 1rem;
+  background-color: #2d6a4f
+  ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* fin  section recherche */ 
+
+/* images avant footer */
+.footer-img img {
+  
+  height: 400px;
+  width: 300vh;
+  max-width: 100%;
+}
+
+/*
+.carte-trajet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fefefe;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.carte-gauche .photo-conducteur {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.carte-centre {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.carte-centre h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #2f2f2f;
+}
+
+.carte-centre .note {
+  margin: 2px 0;
+  color: #ffaa00;
+}
+
+.carte-droite {
+  text-align: right;
+}
+
+.carte-droite .prix {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-detail {
+  background-color: #3a6f41;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-detail:hover {
+  background-color: #2e5734;
+}
+*/
+.carte-trajet {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.photo-conducteur {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.infos-trajet {
+    flex: 1;
+}
+.btn-detail {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.btn-detail:hover {
+    background-color: #45a049;
+}
+
