@@ -37,8 +37,8 @@
   <form action="04_resultats.php" method="get">
     <input type="text" name="ville_depart" placeholder="Départ">
     <input type="text" name="ville_arrivee" placeholder="Destination">
-    <input type="time" name="heure_depart" placeholder="Heure">
-    <input type="date" name="date_depart">
+    <input type="time" name="heure_depart"  placeholder="Heure">
+    <input type="date" name="date_depart" >
     <button type="submit">Rechercher</button>
 </form>
 
