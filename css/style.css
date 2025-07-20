@@ -1,15 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5fdf8;
+  background-color: #fffce0;
   margin: 0;
   padding: 0;
-}
-
-header, footer {
-  background-color: #2d6a4f;
-  color: white;
- /* padding: 1rem;*/
-  text-align: center;
 }
 footer p a {
     color: #f5fdf8;
@@ -18,6 +11,13 @@ footer p a {
 footer {
     padding-top: 0;
 }
+
+header, footer {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+}
+
 /* debut navbar */
 header {
   display: flex;
@@ -26,78 +26,96 @@ header {
 }
 
 .logo-container img {
-  width: 180px; /* ajuste la taille du logo selon ton besoin */
+  width: 180px; 
   margin-top: 5px;
   margin-bottom: 5px;
   height: 150px;
 }
 
+
+ /* star section navbar */
 .navbar {
   display: flex;
-  gap: 70px;
   justify-content: center;
-  background-color: #114B4B; /* couleur de fond de la navbar si besoin */
-  width: 100%;
+  gap: 10px;
   padding: 10px 0;
+  background-color: #114B4B;
+  width: 100%;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  padding:  8px 16px;
+  transition: background-color 0.3s;
+  margin: auto;
 }
 
-/* fin navbar */
+.navbar a:hover {
+  background-color: #0d3e3e;
+  border-radius: 5px;
+}
+
+/* end section navbar */
+
 
 /* section hero présentation */
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start; 
   justify-content: space-between;
-  background-color: #ffffdd;
-  padding: 2rem;
+  background-color: #fffce0;
+  padding: 2rem 8rem;
   flex-wrap: wrap;
+  min-height: 90vh; 
+  gap: 3rem;
 }
 
 .hero-text {
-  flex: 1;
-  min-width: 200px;
-  padding: 3rem;
+  flex: 2;
+  min-width: 280px;
+  padding-right: 3rem;
+  margin-top: 5rem;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #1b4332;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #2d6a4f;
+  margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333;
-  margin-top: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  max-width: 600px;
 }
 
 .hero-img {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
+  flex: 2;
+  min-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-img img {
-  max-width: 100%;
+  
+  max-width: 780px;
   height: auto;
+  object-fit: contain;
 }
 
 /* debut section recherche */
 .recherche {
-  background-color: #c6e182
-  ;
+  background-color: #c6e182 ;
   padding: 2rem;
   text-align: center;
 }
@@ -136,64 +154,11 @@ header {
   max-width: 100%;
 }
 
-/*
-.carte-trajet {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fefefe;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+/**//* section hero resultat des recherche trajet */
 
-.carte-gauche .photo-conducteur {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
+.body-resultat{
+  background-color: #fffce0;
 }
-
-.carte-centre {
-  flex-grow: 1;
-  margin-left: 20px;
-}
-
-.carte-centre h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #2f2f2f;
-}
-
-.carte-centre .note {
-  margin: 2px 0;
-  color: #ffaa00;
-}
-
-.carte-droite {
-  text-align: right;
-}
-
-.carte-droite .prix {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.btn-detail {
-  background-color: #3a6f41;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.btn-detail:hover {
-  background-color: #2e5734;
-}
-*/
 .carte-trajet {
     display: flex;
     border: 1px solid #ccc;
@@ -232,7 +197,7 @@ header {
 body#body-inscription {
   margin: 0;
   padding: 20px;
-  background-color: #ffffdd ;
+  background-color: #fffce0 ;
   font-family: Arial, sans-serif;
     justify-content: center;
     align-items: flex-start;
@@ -247,14 +212,7 @@ body#body-inscription {
   color: #0a814f;
 }
 
-/*#h2-inscription {
-   
-    color: #2c3e50;
-   text-align: center;
-  margin-top: 30px;
-  font-size: 24px;
-}
-*/
+
 .role-selection {
     display: flex;
     justify-content: center;
@@ -298,6 +256,7 @@ body#body-inscription {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
 #form-inscription .btn {
     margin-top: 20px;
     width: 100%;
@@ -321,43 +280,47 @@ body#body-inscription {
     color: green;
     font-weight: bold;
 }
+
 /* ###############  END PAGE INSCRIPTIONS  ###############  */
+
 /* === FORMULAIRE DE CONNEXION === */
 #body-connexion {
-    background-color: #f6f6f6;
+    background-color: #fffce0;
     font-family: Arial, sans-serif;
     padding: 40px 0;
 }
 
-.form-container {
+.connexion-wrapper .form-container {
     width: 90%;
     max-width: 450px;
-    margin: auto;
+    margin-top: 80px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    padding: 30px;
+    padding: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.form-title {
+.connexion-wrapper .form-title {
     text-align: center;
     font-size: 22px;
     margin-bottom: 25px;
     color: #2c3e50;
 }
 
-.form-box {
+.connexion-wrapper .form-box {
     display: flex;
     flex-direction: column;
 }
 
-.form-label {
+.connexion-wrapper .form-label {
     margin: 12px 0 5px;
     font-weight: bold;
     color: #34495e;
 }
 
-.form-input {
+.connexion-wrapper .form-input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -365,7 +328,7 @@ body#body-inscription {
     width: 100%;
 }
 
-.form-button {
+.connexion-wrapper .form-button {
     margin-top: 20px;
     padding: 10px;
     background-color: #27ae60;
@@ -377,11 +340,11 @@ body#body-inscription {
     transition: background 0.3s;
 }
 
-.form-button:hover {
+.connexion-wrapper .form-button:hover {
     background-color: #219150;
 }
 
-.form-error {
+.connexion-wrapper .form-error {
     color: #c0392b;
     background-color: #fbeaea;
     padding: 8px 12px;
@@ -389,3 +352,315 @@ body#body-inscription {
     margin-bottom: 15px;
     font-size: 14px;
 }
+
+/* fin du formulaire 
+
+/* ###############  DEBUT PAGE espace conducteur  ###############  */
+/* === espace conducteur === */
+
+ .body-conducteur{
+  background-color: #fffce0;
+  margin-inline-end: auto;
+ }
+
+
+
+.container-conducteur {
+    max-width: 1500px;
+    margin: 50px auto; 
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 40px; 
+    padding-top: 60px; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.titre-espace {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.carte-profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.infos-utilisateur {
+    flex-grow: 1;
+    padding-left: 15px;
+}
+
+.pseudo {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.credits {
+    margin: 5px 0 0;
+    color: #444;
+}
+
+.modifier-profil {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.bloc-boutons,
+.bas-espace {
+    margin-top: 20px;
+}
+
+.bouton-espace {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #e8f5e9;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bouton-espace:hover {
+    background-color: #c8e6c9;
+}
+.visible {
+  display: block;
+}
+#trajetsContainer {
+  display: none;
+}
+/* ===== STYLE SPÉCIFIQUE À L'ESPACE CONDUCTEUR ===== */
+
+.section-conducteur h4 {
+    font-size: 1.3rem;
+    color: #14532d;
+    margin-bottom: 15px;
+}
+
+.section-conducteur .card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.section-conducteur span {
+    display: block;
+    margin: 5px 0;
+    color: #2c3e50;
+}
+
+.section-conducteur i {
+    color: #198754;
+    margin-right: 6px;
+}
+
+.section-conducteur .text-muted {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* fin page espace conducteur */
+
+/* photo profil du conducteur */
+.photo-avatar {
+    width: 150px;             
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #198754; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 10px;
+}
+
+
+
+
+/* ############### debut PAGE proposer un trajet conducteur  ###############  */
+
+
+.body-trajet{
+  background-color: #fffce0;
+}
+.container-form-proposer {
+    max-width: 510px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #FFFFF7;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(180, 210, 180, 0.3);
+}
+
+
+.titre-form-proposer {
+    text-align: center;
+    color: #1d7a41;
+    margin-bottom: 20px;
+}
+
+
+.message-form-proposer {
+    color: rgb(66, 122, 103);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Formulaire */
+.formulaire-proposer .label-proposer {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.input-proposer {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Bouton */
+.btn-proposer {
+    width: 100%;
+    padding: 10px;
+    background: #1d7a41;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-proposer:hover {
+    background: #155d31;
+}
+
+/* ############### Fin PAGE proposer un trajet conducteur  ###############  */
+
+.retour_espace {
+    color: white;
+    background-color: #198754;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 648px;
+   
+}
+/* fin */
+/* star espace conducteur */
+
+.bouton-espace {
+    width: 100%;
+    background-color: #e0ffe0;
+    border: none;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.bouton-espace:hover {
+    background-color: #c6f7c6;
+}
+
+.section-conducteur {
+    background-color: #fffce0;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.d-none {
+    display: none;
+}
+
+.carte-profil {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.photo-profil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+
+
+/* ############### debut PAGE deconnexion ###############  */
+.bloc-deconnexion {
+    margin-bottom: 20px;
+    padding-left: 1200px;
+    padding-top: 5px;
+}
+
+.btn-deconnexion {
+    background-color: #30614d;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-deconnexion:hover {
+    background-color: #2c3b2a;
+    transform: scale(1.05);
+}
+
+/* ###############  FIN PAGE espace passager   ###############  */
+
+.carte-passager {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.section-passager {
+    margin-top: 20px;
+}
+
+.bloc-boutons button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.rounded-circle {
+    object-fit: cover;
+    border: 2px solid #dee2e6;
+}
+
+
+

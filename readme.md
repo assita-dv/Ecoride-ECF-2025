@@ -1,5 +1,9 @@
-# Ecoride ECF
+## EcoRide – ECF Développeur Web & Web Mobile 2025
 
-ce site est un site web de covoiturage écologique
+## Description
+EcoRide est une plateforme de **covoiturage écologique** développée dans le cadre de mon ECF DWWM. Elle permet aux conducteurs de proposer des trajets, et aux passagers d'y participer grâce à un système de crédits.
 
-# installation
+## 🔧 Installation
+1. Cloner le projet :
+```bash
+git clone 
