@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             header("Location: employes/accueil_employe.php");
             exit;
         } elseif ($utilisateur["role"] === "admin") {
-            header("Location: admin/accueil_admin.php");
+            header("Location: Admin/accueil_admin.php");
             exit;
         } else {
             header("Location: utilisateur/espace_utilisateur.php");
