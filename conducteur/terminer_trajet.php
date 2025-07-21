@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", 'root', '');
+include_once '../config.php';
 if (!isset($_SESSION['id_utilisateur'])) {
     header("Location: ../connexion.php");
     exit;

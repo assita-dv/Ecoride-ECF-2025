@@ -1,5 +1,5 @@
 <?php
-include_once './config.php'; 
+include_once 'config.php';
 
 // Récupération et nettoyage des données GET
 $ville_depart   = trim($_GET['ville_depart'] ?? '');

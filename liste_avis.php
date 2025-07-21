@@ -1,6 +1,6 @@
 <?php
 session_start();
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", 'root', '');
+include_once 'config.php';
 
 // Vérifie si un id conducteur est bien passé
 if (!isset($_GET['id']) || empty($_GET['id'])) {

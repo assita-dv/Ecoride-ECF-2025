@@ -2,7 +2,7 @@
 session_start();
 
 // Connexion à la base de données
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", 'root', '');
+include_once '../config.php';
 
 // Vérifie si l'utilisateur est connecté
 if (!isset($_SESSION['id_utilisateur'])) {

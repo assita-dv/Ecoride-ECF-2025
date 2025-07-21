@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", 'root', '');
+include_once '../config.php';
 
 if (isset($_GET['id'], $_GET['action'])) {
     $id_avis = (int) $_GET['id'];

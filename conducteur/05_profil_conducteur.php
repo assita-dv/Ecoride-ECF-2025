@@ -4,7 +4,7 @@
 
 <?php
 // Connexion à la base de données
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", "root", "");
+include_once '../config.php';
 
 // Vérification ID
 $id_conducteur = isset($_GET['id']) ? (int) $_GET['id'] : null;

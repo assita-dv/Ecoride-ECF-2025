@@ -2,7 +2,7 @@
 include('header_employe.php');
 
 // Connexion à la base
-$pdo = new PDO("mysql:host=localhost;dbname=ecoride_db;charset=utf8", 'root', '');
+include_once '../config.php';
 
 // Récupérer les avis en attente
 $stmt = $pdo->query("

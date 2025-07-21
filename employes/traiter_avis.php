@@ -5,7 +5,7 @@ if (!isset($_SESSION['id_utilisateur']) || $_SESSION['role'] !== 'employe') {
     exit;
 }
 
-$pdo = new PDO('mysql:host=localhost;dbname=ecoride_db;charset=utf8', 'root', '');
+include_once '../config.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id_avis = $_POST['id_avis'];
