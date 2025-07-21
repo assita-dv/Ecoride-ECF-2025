@@ -2,11 +2,6 @@
 <?php
 // Connexion à la base de données
 include_once 'config.php';
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
 
 $message = '';
 
