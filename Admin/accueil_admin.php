@@ -7,7 +7,7 @@ if (!isset($_SESSION['id_utilisateur']) || $_SESSION['role'] !== 'admin') {
     exit;
 }
 
-$pdo = new PDO('mysql:host=localhost;dbname=ecoride_db;charset=utf8', 'root', '');
+include_once '../config.php';
 
 // Total crédits gagnés
 $total_credits = $pdo->query("SELECT SUM(c.montant) AS total FROM credits c")->fetch(PDO::FETCH_ASSOC);

@@ -5,7 +5,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     exit;
 }
 
-$pdo = new PDO('mysql:host=localhost;dbname=ecoride_db;charset=utf8', 'root', '');
+include_once '../config.php';
 
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

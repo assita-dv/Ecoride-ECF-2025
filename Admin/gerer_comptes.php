@@ -6,7 +6,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     exit;
 }
 
-$pdo = new PDO('mysql:host=localhost;dbname=ecoride_db;charset=utf8', 'root', '');
+include_once '../config.php';
 
 // Récupérer les employés et les conducteurs
 $stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE role IN ('employe', 'conducteur')");

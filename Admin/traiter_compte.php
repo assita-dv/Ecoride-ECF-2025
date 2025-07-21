@@ -1,10 +1,6 @@
 <?php
 session_start();
-
-$host = 'localhost';
-$dbname = 'ecoride_db';
-$user = 'root';
-$pass = '';
+include_once '../config.php';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
