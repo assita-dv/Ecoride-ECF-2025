@@ -43,7 +43,7 @@ $trajets_passes = $stmt_passe->fetchAll();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Conducteur – EcoRide</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -54,7 +54,7 @@ $trajets_passes = $stmt_passe->fetchAll();
 <div class="container-conducteur">
 
     <!-- BOUTON DECONNEXION  -->
-    <div class="bloc-deconnexion text-start mb-4 ">
+    <div class="bloc-deconnexion text-start text-end mb-4 ">
         <a href="/deconnexion.php" class="btn-deconnexion">
             <i class="fas fa-sign-out-alt"></i> Déconnexion
         </a>

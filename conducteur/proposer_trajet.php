@@ -47,7 +47,7 @@ $stmt->execute([$depart, $destination, $date, $heure, $places, $prix, $id_voitur
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposer un voyage – EcoRide</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -90,9 +90,9 @@ $stmt->execute([$depart, $destination, $date, $heure, $places, $prix, $id_voitur
         <button type="submit" class="btn-proposer">Publier</button>
     </form>
 </div>
-<div class="text-center mt-4">
-    <a href="espace_conducteur.php" class="btn btn-success retour_espace">Retour</a>
-</div>
 
+<div class="button_retour">
+  <a href="espace_conducteur.php" class="retour-button">Retour</a>
+</div>
 </body>
 </html>

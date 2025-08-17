@@ -49,7 +49,7 @@ $resultats = $stmt->fetchAll();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Résultats de trajets - EcoRide</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -85,8 +85,10 @@ $resultats = $stmt->fetchAll();
                         </div>
                     </div>
 
-                    <div class="col-md-4 text-end">
-                        <div class="fs-5 fw-bold text-success"><?= htmlspecialchars($trajet['prix']) ?> €</div>
+                   
+                        <div class="col-md-4 text-md-end text-center">
+
+                        <div class="fs-5 fw-bold text-success text-start text-md-end"><?= htmlspecialchars($trajet['prix']) ?> €</div>
                        
                     </div>
                 </div>
@@ -94,7 +96,7 @@ $resultats = $stmt->fetchAll();
                 <!-- Séparateur -->
                 <hr class="my-3">
 
-                <!-- photo conducteur et infos -->
+                <!-- photo conducteur et infos      -->
                 <div class="row align-items-center">
                     <div class="col-auto">
                         <img src="<?= !empty($trajet['photo']) ? 'uploads/' . htmlspecialchars($trajet['photo']) : 'images/default_avatar.png' ?>"
@@ -105,20 +107,26 @@ $resultats = $stmt->fetchAll();
                         <div class="text-muted small">@<?= htmlspecialchars($trajet['pseudo']) ?></div>
                         <div class="text-success small mt-1"> <i class="fas fa-car text-success me-1"></i> Voyage écologique</div>
                     </div>
-                    <div class="col-md-4 text-end">
-                      <a href="/conducteur/05_profil_conducteur.php?id=<?= $trajet['id_utilisateur'] ?>" class="btn btn-outline-success btn-sm mt-2">Voir le profil</a>
-                    <a href="/utilisateur/confirmer_participation_etape.php?id=<?= $trajet['id_covoiturage'] ?>" class="btn btn-success mt-2">Participer</a>
+                    <div class="col-md-4 text-md-end text-center">
+    <a href="/conducteur/05_profil_conducteur.php?id=<?= $trajet['id_utilisateur'] ?>" 
+       class="btn btn-outline-success btn-sm d-block d-md-inline-block mt-2 mb-2 mb-md-0">
+       Voir le profil
+    </a>
+    <a href="/utilisateur/confirmer_participation_etape.php?id=<?= $trajet['id_covoiturage'] ?>"
+       class="btn btn-success d-block d-md-inline-block mt-2">
+       Participer
+    </a>
+</div>
 
-                    </div>
+      </div>
                 </div>
             </div>
         <?php endforeach; ?>
     <?php else: ?>
         <div class="alert alert-warning mt-4"> Aucun trajet trouvé.</div>
     <?php endif; ?>
-
-     <a href="index.php" class="btn btn-secondary mt-3"> Revenir à l'accueil</a>
-
+<div class="button_retour">
+  <a href="index.php" class="retour-button">Retour</a>
 </div>
 
 </body>

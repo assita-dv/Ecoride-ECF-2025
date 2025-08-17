@@ -12,49 +12,114 @@ footer {
     padding-top: 0;
 }
 
+/* star nouveau navbar */ 
+/* Header global */
 header, footer {
   background-color: #2d6a4f;
   color: white;
   text-align: center;
 }
 
-/* debut navbar */
 header {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
+  padding: 10px;
 }
 
 .logo-container img {
-  width: 180px; 
-  margin-top: 5px;
-  margin-bottom: 5px;
-  height: 150px;
+  width: 180px;  
+  height: auto;
 }
 
+/* Hamburger - caché sur desktop */
 
- /* star section navbar */
-.navbar {
+/* Hamburger */
+.navbar-toggler {
+  display: none; /* caché sur desktop */
+  font-size: 30px; /* plus gros */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute; /* pour le placer à droite */
+  top: 25px;
+  right: 20px;
+  z-index: 1000; /* au-dessus du menu */
+  margin-top: 0;
+}
+
+/* Menu desktop */
+.navbar-collapse {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding: 10px 0;
+  width: 110%;
   background-color: #114B4B;
-  width: 100%;
+  padding: 15px 0;
 }
 
-.navbar a {
+.navbar-collapse a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  padding:  8px 16px;
+  padding: 8px 16px;
   transition: background-color 0.3s;
-  margin: auto;
+  text-align: center;
 }
 
-.navbar a:hover {
+.navbar-collapse a:hover {
   background-color: #0d3e3e;
   border-radius: 5px;
+}
+
+
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;          
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .logo-container img {
+    width: 120px;  
+    height: auto;
+  }
+
+  .navbar-toggler {
+    display: block;  
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 60px; /* menu en dessous du header */
+    right: 0;
+    display: none;
+    flex-direction: column;
+    background-color: #114B4B;
+    border-radius: 5px;
+    width: 200px;
+    padding: 0;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+  
+  .navbar-collapse a {
+    padding: 12px;
+    border-top: 1px solid #0d3e3e;
+    color: white;
+  text-decoration: none;
+  }
+
+  .navbar-toggler {
+    display: block; 
+   
+  }
 }
 
 /* end section navbar */
@@ -66,7 +131,7 @@ header {
   align-items: flex-start; 
   justify-content: space-between;
   background-color: #fffce0;
-  padding: 2rem 8rem;
+  padding: 1rem 10rem;
   flex-wrap: wrap;
   min-height: 90vh; 
   gap: 3rem;
@@ -113,9 +178,57 @@ header {
   object-fit: contain;
 }
 
-/* debut section recherche */
+@media screen and (max-width: 800px) {
+  .hero {
+    flex-direction: column; /* texte au-dessus, image en dessous */
+    align-items: center;    /* centre horizontalement */
+    text-align: center;     /* centre le texte */
+    padding: 2rem 1rem;     /* moins de padding horizontal */
+  }
+
+  .hero-text {
+    margin-top: 2rem;
+    padding-right: 0;
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+ 
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 350px; /* largeur max pour que toutes les lignes soient similaires */
+    margin: 0 auto;   /* centre le bloc */
+    text-align: center;
+  }
+  .hero-img {
+    min-width: unset;
+    margin-top: 1.5rem;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 400px; /* pour pas que ça prenne tout l'écran si l'image est énorme */
+  }
+}
+
+
+
+
+
+/* 
+
+
+/* Section recherche */
 .recherche {
-  background-color: #c6e182 ;
+  background-color: #c6e182;
   padding: 2rem;
   text-align: center;
 }
@@ -128,7 +241,8 @@ header {
   margin-top: 1rem;
 }
 
-.recherche input {
+.recherche input,
+.recherche button {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -136,13 +250,25 @@ header {
 }
 
 .recherche button {
-  padding: 0.5rem 1rem;
-  background-color: #2d6a4f
-  ;
+  background-color: #2d6a4f;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+}
+
+
+/* RESPONSIVE : pour les écrans < 600px */
+@media (max-width: 600px) {
+  .recherche form {
+    flex-direction: column; /* les champs passent en colonne */
+    align-items: stretch;   /* ils prennent toute la largeur dispo */
+  }
+
+  .recherche input,
+  .recherche button {
+    width: 100%; /* pleine largeur */
+    min-width: unset; /* on enlève la min-width qui bloque */
+  }
 }
 /* fin  section recherche */ 
 
@@ -187,6 +313,36 @@ header {
 }
 .btn-detail:hover {
     background-color: #45a049;
+}
+
+.retour-button {
+    display: inline-block;
+    padding: 7px 16px;
+    background-color: #2d6a4f;
+    color: white;
+    text-decoration: none;
+    border-radius: 14px;
+    width: 105px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.button_retour {
+    position: relative;
+    left: 17%; /* décale un peu vers la droite */
+}
+
+@media (max-width: 767px) {
+  .retour-button {
+   background-color: #2d6a4f;
+   border-radius: 10px;
+   width: 90px;
+  }
+
+.button_retour {
+    position: relative;
+    left: 5%; /* décale un peu vers la droite */
+}
 }
 
 /* ###############  START PAGE INSCRIPTIONS  ###############  */
@@ -358,6 +514,7 @@ body#body-inscription {
 /* ###############  DEBUT PAGE espace conducteur  ###############  */
 /* === espace conducteur === */
 
+
  .body-conducteur{
   background-color: #fffce0;
   margin-inline-end: auto;
@@ -439,7 +596,7 @@ body#body-inscription {
 #trajetsContainer {
   display: none;
 }
-/* ===== STYLE SPÉCIFIQUE À L'ESPACE CONDUCTEUR ===== */
+ /* ===== STYLE SPÉCIFIQUE À L'ESPACE CONDUCTEUR ===== */
 
 .section-conducteur h4 {
     font-size: 1.3rem;
@@ -485,6 +642,29 @@ body#body-inscription {
 }
 
 
+/* ############### Media Queries pour responsive ############### */
+
+@media (max-width: 768px) {
+    .carte-profil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .carte-profil .infos-utilisateur {
+        margin-top: 10px;
+    }
+
+    h1.titre-espace {
+        font-size: 1.5rem;
+    }
+
+    .bouton-espace {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+/* fin espace conducteur */
 
 
 /* ############### debut PAGE proposer un trajet conducteur  ###############  */
@@ -547,6 +727,32 @@ body#body-inscription {
 
 .btn-proposer:hover {
     background: #155d31;
+}
+
+ /* ################ Responsiveness ################ */
+@media (max-width: 768px) {
+   
+    .titre-form-proposer {
+        font-size: 10px;
+    }
+    .input-proposer {
+        font-size: 10px;
+        padding: 9px;
+    }
+
+.btn-proposer {
+    width: 80%;
+    font-size: 15px;
+}
+
+.container-form-proposer {
+    max-width: 210px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #FFFFF7;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(180, 210, 180, 0.3);
+}
 }
 
 /* ############### Fin PAGE proposer un trajet conducteur  ###############  */
@@ -615,10 +821,13 @@ body#body-inscription {
 
 
 /* ############### debut PAGE deconnexion ###############  */
+
+/* Desktop : bouton en haut à droite */
 .bloc-deconnexion {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 20px;
     margin-bottom: 20px;
-    padding-left: 1200px;
-    padding-top: 5px;
 }
 
 .btn-deconnexion {
@@ -640,6 +849,20 @@ body#body-inscription {
     transform: scale(1.05);
 }
 
+/* Mobile : bouton fixé en bas, centré */
+@media (max-width: 768px) {
+    .bloc-deconnexion {
+        position: fixed;
+        bottom: 20px;       /* distance depuis le bas */
+        left: 50%;          /* pour centrer horizontalement */
+        transform: translateX(-50%);
+        width: auto;
+        justify-content: center;
+      
+        margin-top: 20px;
+        z-index: 1000;      /* pour être au-dessus de tout */
+        padding:0 ;
+    } }
 /* ###############  FIN PAGE espace passager   ###############  */
 
 .carte-passager {

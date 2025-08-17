@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil - EcoRide</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -16,6 +16,8 @@ session_start();
   <?php include('page/header.php'); ?>
 
 
+  
+</header>
 <section class="hero">
   <div class="hero-text">
     <h1>Bienvenue sur EcoRide </h1>
@@ -50,5 +52,6 @@ session_start();
   <?php include('page/footer.php'); ?>
 
 </body>
+
 </html>
 
